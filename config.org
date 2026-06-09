@@ -112,6 +112,8 @@
   (setq load-path (cons "/usr/lib/erlang/lib/tools-4.2/emacs" load-path))
   (require 'erlang-start)
   (use-package go-mode :ensure t :demand t)
+  (use-package d-mode :ensure t :demand t)
+  (use-package a68-mode :ensure t :demand t)
 #+end_src
 
 * FLYCHECK
