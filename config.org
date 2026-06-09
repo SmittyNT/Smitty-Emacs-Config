@@ -95,18 +95,23 @@
   	    vterm-max-scrollback 5000))
 #+end_src
 
+
 * LANGUAGES AND SUCH
 
 #+begin_src emacs-lisp
-    (use-package haskell-mode :ensure t :demand t)
-    (use-package lua-mode :ensure t :demand t)
-    (use-package c3-ts-mode
-      :ensure (:host github :repo "c3lang/c3-ts-mode"))
-    (use-package rust-mode :ensure t :demand t)
-    (use-package sml-mode :ensure t :demand t)
-    (add-to-list 'treesit-language-source-alist '(ocaml . ("https://github.com/tree-sitter/tree-sitter-ocaml" "master" "/ocaml/src")))
-    (use-package neocaml :ensure t :demand t)
-
+  (use-package haskell-mode :ensure t :demand t)
+  (use-package lua-mode :ensure t :demand t)
+  (use-package c3-ts-mode
+    :ensure (:host github :repo "c3lang/c3-ts-mode"))
+  (use-package rust-mode :ensure t :demand t)
+  (use-package sml-mode :ensure t :demand t)
+  (add-to-list 'treesit-language-source-alist '(ocaml . ("https://github.com/tree-sitter/tree-sitter-ocaml" "master" "/ocaml/src")))
+  (use-package neocaml :ensure t :demand t)
+  (use-package zig-mode :ensure t :demand t)
+  (use-package elixir-mode :ensure t :demand t)
+  (setq load-path (cons "/usr/lib/erlang/lib/tools-4.2/emacs" load-path))
+  (require 'erlang-start)
+  (use-package go-mode :ensure t :demand t)
 #+end_src
 
 * FLYCHECK
