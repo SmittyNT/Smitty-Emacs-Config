@@ -86,15 +86,14 @@
 
 * SHELLS AND TERMINALS
 
-** Vterm
-
 #+begin_src emacs-lisp
-      (use-package vterm :ensure t :demand t
-        :config
-        (setq shell-file-name "/bin/fish"
-  	    vterm-max-scrollback 5000))
-#+end_src
+  (use-package vterm
+  :ensure t
+  :config
+  ;; Adjust scrollback buffer size
+  (setq vterm-max-scrollback 10000))
 
+#+end_src
 
 * LANGUAGES AND SUCH
 
@@ -110,7 +109,6 @@
   (use-package zig-mode :ensure t :demand t)
   (use-package elixir-mode :ensure t :demand t)
   (setq load-path (cons "/usr/lib/erlang/lib/tools-4.2/emacs" load-path))
-  (require 'erlang-start)
   (use-package go-mode :ensure t :demand t)
   (use-package d-mode :ensure t :demand t)
   (use-package a68-mode :ensure t :demand t)
