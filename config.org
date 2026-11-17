@@ -69,7 +69,10 @@
   ;;(use-package general :ensure (:wait t) :demand t)
 
   ;; Expands to: (elpaca evil (use-package evil :demand t))
-  (use-package evil :ensure t :demand t)
+  (use-package evil 
+    :ensure t 
+    :demand t
+    :config (evil-mode 1))
 
   ;;Turns off elpaca-use-package-mode current declaration
   ;;Note this will cause evaluate the declaration immediately. It is not deferred.
@@ -113,6 +116,8 @@
   (use-package d-mode :ensure t :demand t)
   (use-package a68-mode :ensure t :demand t)
   (use-package crystal-mode :ensure t :demand t)
+
+  (setq backup-directory-alist '(("." . "~/.emacs.d/file-backups")))
 #+end_src
 
 * FLYCHECK
